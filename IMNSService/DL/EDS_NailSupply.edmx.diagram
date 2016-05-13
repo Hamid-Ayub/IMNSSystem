@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2094e1df1edc4997b166723328a1ba13" Name="Diagram1">
+        <EntityTypeShape EntityType="dbnailsupplyModel.CategoryEntity" Width="1.5" PointX="11.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbnailsupplyModel.CustomerEntity" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbnailsupplyModel.EmployeeCategoryEntity" Width="1.5" PointX="13.75" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbnailsupplyModel.EmployeeEntity" Width="1.5" PointX="16" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbnailsupplyModel.EmployeeLogEntity" Width="1.5" PointX="18.25" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbnailsupplyModel.InventoryEntity" Width="1.5" PointX="6" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbnailsupplyModel.PaymentEntity" Width="1.5" PointX="5.25" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbnailsupplyModel.ProductEntity" Width="1.5" PointX="14" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbnailsupplyModel.ProductExportDetailEntity" Width="1.5" PointX="8.25" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbnailsupplyModel.ProductExportEntity" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbnailsupplyModel.ProductImportDetailEntity" Width="1.5" PointX="11.25" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbnailsupplyModel.ProductImportEntity" Width="1.5" PointX="9" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbnailsupplyModel.ProductReturnDetailEntity" Width="1.5" PointX="7.5" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbnailsupplyModel.ProductReturnEntity" Width="1.5" PointX="5.25" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbnailsupplyModel.ProviderEntity" Width="1.5" PointX="11.75" PointY="12.375" IsExpanded="true" />
+        <AssociationConnector Association="dbnailsupplyModel.FK_CategoryEntity_ProductEntity" ManuallyRouted="false" />
+        <AssociationConnector Association="dbnailsupplyModel.FK_CustomerEntity_ProductExportEntity" ManuallyRouted="false" />
+        <AssociationConnector Association="dbnailsupplyModel.FK_EmployeeEntity_EmployeeCategoryEntity" ManuallyRouted="false" />
+        <AssociationConnector Association="dbnailsupplyModel.FK_EmployeeLogEntity_EmployeeEntity" ManuallyRouted="false" />
+        <AssociationConnector Association="dbnailsupplyModel.FK_InventoryEntity_ProductExportDetailEntity" ManuallyRouted="false" />
+        <AssociationConnector Association="dbnailsupplyModel.FK_InventoryEntity_ProductImportDetailEntity" ManuallyRouted="false" />
+        <AssociationConnector Association="dbnailsupplyModel.FK_ProductExportEntity_PaymentEntity" ManuallyRouted="false" />
+        <AssociationConnector Association="dbnailsupplyModel.FK_ProviderEntity_ProductEntity" ManuallyRouted="false" />
+        <AssociationConnector Association="dbnailsupplyModel.FK_ProductExportEntity_ProductExportDetailEntity" ManuallyRouted="false" />
+        <AssociationConnector Association="dbnailsupplyModel.FK_ProductExportEntity_ProductReturnEntity" ManuallyRouted="false" />
+        <AssociationConnector Association="dbnailsupplyModel.FK_ProductImportEntity_ProductImportDetailEntity" ManuallyRouted="false" />
+        <AssociationConnector Association="dbnailsupplyModel.FK_ProductReturnEntity_ProductReturnDetailEntity" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

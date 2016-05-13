@@ -1,0 +1,1083 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="dbnailsupplyModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="dbnailsupplyModelStoreContainer">
+          <EntitySet Name="CategoryEntity" EntityType="dbnailsupplyModel.Store.CategoryEntity" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CustomerEntity" EntityType="dbnailsupplyModel.Store.CustomerEntity" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="EmployeeCategoryEntity" EntityType="dbnailsupplyModel.Store.EmployeeCategoryEntity" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="EmployeeEntity" EntityType="dbnailsupplyModel.Store.EmployeeEntity" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="EmployeeLogEntity" EntityType="dbnailsupplyModel.Store.EmployeeLogEntity" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="InventoryEntity" EntityType="dbnailsupplyModel.Store.InventoryEntity" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PaymentEntity" EntityType="dbnailsupplyModel.Store.PaymentEntity" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ProductEntity" EntityType="dbnailsupplyModel.Store.ProductEntity" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ProductExportDetailEntity" EntityType="dbnailsupplyModel.Store.ProductExportDetailEntity" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ProductExportEntity" EntityType="dbnailsupplyModel.Store.ProductExportEntity" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ProductImportDetailEntity" EntityType="dbnailsupplyModel.Store.ProductImportDetailEntity" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ProductImportEntity" EntityType="dbnailsupplyModel.Store.ProductImportEntity" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ProductReturnDetailEntity" EntityType="dbnailsupplyModel.Store.ProductReturnDetailEntity" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ProductReturnEntity" EntityType="dbnailsupplyModel.Store.ProductReturnEntity" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ProviderEntity" EntityType="dbnailsupplyModel.Store.ProviderEntity" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_CategoryEntity_ProductEntity" Association="dbnailsupplyModel.Store.FK_CategoryEntity_ProductEntity">
+            <End Role="CategoryEntity" EntitySet="CategoryEntity" />
+            <End Role="ProductEntity" EntitySet="ProductEntity" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CustomerEntity_ProductExportEntity" Association="dbnailsupplyModel.Store.FK_CustomerEntity_ProductExportEntity">
+            <End Role="CustomerEntity" EntitySet="CustomerEntity" />
+            <End Role="ProductExportEntity" EntitySet="ProductExportEntity" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmployeeEntity_EmployeeCategoryEntity" Association="dbnailsupplyModel.Store.FK_EmployeeEntity_EmployeeCategoryEntity">
+            <End Role="EmployeeCategoryEntity" EntitySet="EmployeeCategoryEntity" />
+            <End Role="EmployeeEntity" EntitySet="EmployeeEntity" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmployeeLogEntity_EmployeeEntity" Association="dbnailsupplyModel.Store.FK_EmployeeLogEntity_EmployeeEntity">
+            <End Role="EmployeeEntity" EntitySet="EmployeeEntity" />
+            <End Role="EmployeeLogEntity" EntitySet="EmployeeLogEntity" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InventoryEntity_ProductExportDetailEntity" Association="dbnailsupplyModel.Store.FK_InventoryEntity_ProductExportDetailEntity">
+            <End Role="InventoryEntity" EntitySet="InventoryEntity" />
+            <End Role="ProductExportDetailEntity" EntitySet="ProductExportDetailEntity" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InventoryEntity_ProductImportDetailEntity" Association="dbnailsupplyModel.Store.FK_InventoryEntity_ProductImportDetailEntity">
+            <End Role="InventoryEntity" EntitySet="InventoryEntity" />
+            <End Role="ProductImportDetailEntity" EntitySet="ProductImportDetailEntity" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductExportEntity_PaymentEntity" Association="dbnailsupplyModel.Store.FK_ProductExportEntity_PaymentEntity">
+            <End Role="ProductExportEntity" EntitySet="ProductExportEntity" />
+            <End Role="PaymentEntity" EntitySet="PaymentEntity" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductExportEntity_ProductExportDetailEntity" Association="dbnailsupplyModel.Store.FK_ProductExportEntity_ProductExportDetailEntity">
+            <End Role="ProductExportEntity" EntitySet="ProductExportEntity" />
+            <End Role="ProductExportDetailEntity" EntitySet="ProductExportDetailEntity" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductExportEntity_ProductReturnEntity" Association="dbnailsupplyModel.Store.FK_ProductExportEntity_ProductReturnEntity">
+            <End Role="ProductExportEntity" EntitySet="ProductExportEntity" />
+            <End Role="ProductReturnEntity" EntitySet="ProductReturnEntity" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductImportEntity_ProductImportDetailEntity" Association="dbnailsupplyModel.Store.FK_ProductImportEntity_ProductImportDetailEntity">
+            <End Role="ProductImportEntity" EntitySet="ProductImportEntity" />
+            <End Role="ProductImportDetailEntity" EntitySet="ProductImportDetailEntity" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductReturnEntity_ProductReturnDetailEntity" Association="dbnailsupplyModel.Store.FK_ProductReturnEntity_ProductReturnDetailEntity">
+            <End Role="ProductReturnEntity" EntitySet="ProductReturnEntity" />
+            <End Role="ProductReturnDetailEntity" EntitySet="ProductReturnDetailEntity" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProviderEntity_ProductEntity" Association="dbnailsupplyModel.Store.FK_ProviderEntity_ProductEntity">
+            <End Role="ProviderEntity" EntitySet="ProviderEntity" />
+            <End Role="ProductEntity" EntitySet="ProductEntity" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="CategoryEntity">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+          </Key>
+          <Property Name="CategoryID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CustomerEntity">
+          <Key>
+            <PropertyRef Name="CustomerID" />
+          </Key>
+          <Property Name="CustomerID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Address" Type="nvarchar" MaxLength="100" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="RowVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="EmployeeCategoryEntity">
+          <Key>
+            <PropertyRef Name="EmployeeCategoryID" />
+          </Key>
+          <Property Name="EmployeeCategoryID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="EmployeeEntity">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EmployeeCategoryID" Type="int" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="HireDate" Type="datetime" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+          <Property Name="RowVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="EmployeeLogEntity">
+          <Key>
+            <PropertyRef Name="EmployeeLogID" />
+          </Key>
+          <Property Name="EmployeeLogID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EmployeeID" Type="int" Nullable="false" />
+          <Property Name="LogInTime" Type="datetime" />
+          <Property Name="LogOutTime" Type="datetime" />
+          <Property Name="LogInMachine" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="InventoryEntity">
+          <Key>
+            <PropertyRef Name="InventoryID" />
+          </Key>
+          <Property Name="InventoryID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UPCBarCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="TotalQuantity" Type="int" />
+          <Property Name="ProductStatus" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="Location" Type="nvarchar" MaxLength="100" />
+          <Property Name="RowVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="PaymentEntity">
+          <Key>
+            <PropertyRef Name="PaymentID" />
+          </Key>
+          <Property Name="PaymentID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProductExportID" Type="int" Nullable="false" />
+          <Property Name="PaymentDate" Type="datetime" />
+          <Property Name="TotalDiscountAmount" Type="money" />
+          <Property Name="TotalTaxAmount" Type="money" />
+          <Property Name="TotalItemAmount" Type="money" />
+          <Property Name="TotalPayment" Type="money" />
+          <Property Name="PaymentType" Type="nvarchar" MaxLength="50" />
+          <Property Name="Cashier" Type="nvarchar" MaxLength="100" />
+          <Property Name="RowVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="ProductEntity">
+          <Key>
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="ProductID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProviderID" Type="int" Nullable="false" />
+          <Property Name="CategoryID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="UPCBarCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="SalePrice" Type="money" />
+          <Property Name="ImportPrice" Type="money" />
+          <Property Name="UPCType" Type="nvarchar" MaxLength="100" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="RowVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="ProductExportDetailEntity">
+          <Key>
+            <PropertyRef Name="ProductExportDetailID" />
+          </Key>
+          <Property Name="ProductExportDetailID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProductExportID" Type="int" Nullable="false" />
+          <Property Name="InventoryID" Type="int" Nullable="false" />
+          <Property Name="UPCBarCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="Quantity" Type="int" />
+          <Property Name="ExportDate" Type="datetime" />
+          <Property Name="ItemPrice" Type="money" />
+          <Property Name="SubTotal" Type="money" />
+          <Property Name="RowVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="ProductExportEntity">
+          <Key>
+            <PropertyRef Name="ProductExportID" />
+          </Key>
+          <Property Name="ProductExportID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ExportBarcode" Type="nvarchar" MaxLength="50" />
+          <Property Name="CustomerID" Type="int" />
+          <Property Name="ExportDate" Type="datetime" />
+          <Property Name="TotalQuantity" Type="int" />
+          <Property Name="SubTotal" Type="money" />
+          <Property Name="SubTax" Type="money" />
+          <Property Name="SubDiscount" Type="money" />
+          <Property Name="FinalSalePrice" Type="money" />
+          <Property Name="TotalImportPrice" Type="money" />
+          <Property Name="Status" Type="bit" />
+          <Property Name="RowVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="ProductImportDetailEntity">
+          <Key>
+            <PropertyRef Name="ProductImportDetailID" />
+          </Key>
+          <Property Name="ProductImportDetailID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProductImportID" Type="int" Nullable="false" />
+          <Property Name="InventoryID" Type="int" Nullable="false" />
+          <Property Name="UPCBarCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="InQuantity" Type="int" />
+          <Property Name="OutQuantity" Type="int" />
+          <Property Name="ImportDate" Type="datetime" />
+          <Property Name="ItemImportPrice" Type="money" />
+          <Property Name="TotalImportPrice" Type="money" />
+          <Property Name="ItemImportStatus" Type="int" />
+          <Property Name="RowVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="ProductImportEntity">
+          <Key>
+            <PropertyRef Name="ProductImportID" />
+          </Key>
+          <Property Name="ProductImportID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TotalInQuantity" Type="int" />
+          <Property Name="TotalOutQuantity" Type="int" />
+          <Property Name="ImportDate" Type="datetime" />
+          <Property Name="SubTotal" Type="money" />
+          <Property Name="ImportStatus" Type="int" />
+          <Property Name="ImportBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="RowVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="ProductReturnDetailEntity">
+          <Key>
+            <PropertyRef Name="ProductReturnDetailEntityID" />
+          </Key>
+          <Property Name="ProductReturnDetailEntityID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProductReturnID" Type="int" Nullable="false" />
+          <Property Name="ReturnDate" Type="datetime" />
+          <Property Name="UPCBarCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="Quantity" Type="int" />
+          <Property Name="PriceReturn" Type="money" />
+          <Property Name="TaxReturn" Type="money" />
+          <Property Name="DiscountReturn" Type="money" />
+          <Property Name="FinalPriceReturn" Type="money" />
+          <Property Name="RowVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="ProductReturnEntity">
+          <Key>
+            <PropertyRef Name="ProductReturnID" />
+          </Key>
+          <Property Name="ProductReturnID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProductReturnBarcode" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProductExportID" Type="int" Nullable="false" />
+          <Property Name="ReturnDate" Type="datetime" />
+          <Property Name="TotalItemReturn" Type="int" />
+          <Property Name="TotalPriceReturn" Type="money" />
+          <Property Name="TotalTaxReturn" Type="money" />
+          <Property Name="TotalDiscountReturn" Type="money" />
+          <Property Name="FinalPriceReturn" Type="money" />
+          <Property Name="RowVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="ProviderEntity">
+          <Key>
+            <PropertyRef Name="ProviderID" />
+          </Key>
+          <Property Name="ProviderID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Address" Type="nvarchar" MaxLength="100" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="RowVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <Association Name="FK_CategoryEntity_ProductEntity">
+          <End Role="CategoryEntity" Type="dbnailsupplyModel.Store.CategoryEntity" Multiplicity="1" />
+          <End Role="ProductEntity" Type="dbnailsupplyModel.Store.ProductEntity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CategoryEntity">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="ProductEntity">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CustomerEntity_ProductExportEntity">
+          <End Role="CustomerEntity" Type="dbnailsupplyModel.Store.CustomerEntity" Multiplicity="0..1" />
+          <End Role="ProductExportEntity" Type="dbnailsupplyModel.Store.ProductExportEntity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CustomerEntity">
+              <PropertyRef Name="CustomerID" />
+            </Principal>
+            <Dependent Role="ProductExportEntity">
+              <PropertyRef Name="CustomerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmployeeEntity_EmployeeCategoryEntity">
+          <End Role="EmployeeCategoryEntity" Type="dbnailsupplyModel.Store.EmployeeCategoryEntity" Multiplicity="1" />
+          <End Role="EmployeeEntity" Type="dbnailsupplyModel.Store.EmployeeEntity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmployeeCategoryEntity">
+              <PropertyRef Name="EmployeeCategoryID" />
+            </Principal>
+            <Dependent Role="EmployeeEntity">
+              <PropertyRef Name="EmployeeCategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmployeeLogEntity_EmployeeEntity">
+          <End Role="EmployeeEntity" Type="dbnailsupplyModel.Store.EmployeeEntity" Multiplicity="1" />
+          <End Role="EmployeeLogEntity" Type="dbnailsupplyModel.Store.EmployeeLogEntity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmployeeEntity">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="EmployeeLogEntity">
+              <PropertyRef Name="EmployeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InventoryEntity_ProductExportDetailEntity">
+          <End Role="InventoryEntity" Type="dbnailsupplyModel.Store.InventoryEntity" Multiplicity="1" />
+          <End Role="ProductExportDetailEntity" Type="dbnailsupplyModel.Store.ProductExportDetailEntity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InventoryEntity">
+              <PropertyRef Name="InventoryID" />
+            </Principal>
+            <Dependent Role="ProductExportDetailEntity">
+              <PropertyRef Name="InventoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InventoryEntity_ProductImportDetailEntity">
+          <End Role="InventoryEntity" Type="dbnailsupplyModel.Store.InventoryEntity" Multiplicity="1" />
+          <End Role="ProductImportDetailEntity" Type="dbnailsupplyModel.Store.ProductImportDetailEntity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InventoryEntity">
+              <PropertyRef Name="InventoryID" />
+            </Principal>
+            <Dependent Role="ProductImportDetailEntity">
+              <PropertyRef Name="InventoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductExportEntity_PaymentEntity">
+          <End Role="ProductExportEntity" Type="dbnailsupplyModel.Store.ProductExportEntity" Multiplicity="1" />
+          <End Role="PaymentEntity" Type="dbnailsupplyModel.Store.PaymentEntity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductExportEntity">
+              <PropertyRef Name="ProductExportID" />
+            </Principal>
+            <Dependent Role="PaymentEntity">
+              <PropertyRef Name="ProductExportID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductExportEntity_ProductExportDetailEntity">
+          <End Role="ProductExportEntity" Type="dbnailsupplyModel.Store.ProductExportEntity" Multiplicity="1" />
+          <End Role="ProductExportDetailEntity" Type="dbnailsupplyModel.Store.ProductExportDetailEntity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductExportEntity">
+              <PropertyRef Name="ProductExportID" />
+            </Principal>
+            <Dependent Role="ProductExportDetailEntity">
+              <PropertyRef Name="ProductExportID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductExportEntity_ProductReturnEntity">
+          <End Role="ProductExportEntity" Type="dbnailsupplyModel.Store.ProductExportEntity" Multiplicity="1" />
+          <End Role="ProductReturnEntity" Type="dbnailsupplyModel.Store.ProductReturnEntity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductExportEntity">
+              <PropertyRef Name="ProductExportID" />
+            </Principal>
+            <Dependent Role="ProductReturnEntity">
+              <PropertyRef Name="ProductExportID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductImportEntity_ProductImportDetailEntity">
+          <End Role="ProductImportEntity" Type="dbnailsupplyModel.Store.ProductImportEntity" Multiplicity="1" />
+          <End Role="ProductImportDetailEntity" Type="dbnailsupplyModel.Store.ProductImportDetailEntity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductImportEntity">
+              <PropertyRef Name="ProductImportID" />
+            </Principal>
+            <Dependent Role="ProductImportDetailEntity">
+              <PropertyRef Name="ProductImportID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductReturnEntity_ProductReturnDetailEntity">
+          <End Role="ProductReturnEntity" Type="dbnailsupplyModel.Store.ProductReturnEntity" Multiplicity="1" />
+          <End Role="ProductReturnDetailEntity" Type="dbnailsupplyModel.Store.ProductReturnDetailEntity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductReturnEntity">
+              <PropertyRef Name="ProductReturnID" />
+            </Principal>
+            <Dependent Role="ProductReturnDetailEntity">
+              <PropertyRef Name="ProductReturnID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProviderEntity_ProductEntity">
+          <End Role="ProviderEntity" Type="dbnailsupplyModel.Store.ProviderEntity" Multiplicity="1" />
+          <End Role="ProductEntity" Type="dbnailsupplyModel.Store.ProductEntity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProviderEntity">
+              <PropertyRef Name="ProviderID" />
+            </Principal>
+            <Dependent Role="ProductEntity">
+              <PropertyRef Name="ProviderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="dbnailsupplyModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="dbnailsupplyEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="CategoryEntities" EntityType="dbnailsupplyModel.CategoryEntity" />
+          <EntitySet Name="CustomerEntities" EntityType="dbnailsupplyModel.CustomerEntity" />
+          <EntitySet Name="EmployeeCategoryEntities" EntityType="dbnailsupplyModel.EmployeeCategoryEntity" />
+          <EntitySet Name="EmployeeEntities" EntityType="dbnailsupplyModel.EmployeeEntity" />
+          <EntitySet Name="EmployeeLogEntities" EntityType="dbnailsupplyModel.EmployeeLogEntity" />
+          <EntitySet Name="InventoryEntities" EntityType="dbnailsupplyModel.InventoryEntity" />
+          <EntitySet Name="PaymentEntities" EntityType="dbnailsupplyModel.PaymentEntity" />
+          <EntitySet Name="ProductEntities" EntityType="dbnailsupplyModel.ProductEntity" />
+          <EntitySet Name="ProductExportDetailEntities" EntityType="dbnailsupplyModel.ProductExportDetailEntity" />
+          <EntitySet Name="ProductExportEntities" EntityType="dbnailsupplyModel.ProductExportEntity" />
+          <EntitySet Name="ProductImportDetailEntities" EntityType="dbnailsupplyModel.ProductImportDetailEntity" />
+          <EntitySet Name="ProductImportEntities" EntityType="dbnailsupplyModel.ProductImportEntity" />
+          <EntitySet Name="ProductReturnDetailEntities" EntityType="dbnailsupplyModel.ProductReturnDetailEntity" />
+          <EntitySet Name="ProductReturnEntities" EntityType="dbnailsupplyModel.ProductReturnEntity" />
+          <EntitySet Name="ProviderEntities" EntityType="dbnailsupplyModel.ProviderEntity" />
+          <AssociationSet Name="FK_CategoryEntity_ProductEntity" Association="dbnailsupplyModel.FK_CategoryEntity_ProductEntity">
+            <End Role="CategoryEntity" EntitySet="CategoryEntities" />
+            <End Role="ProductEntity" EntitySet="ProductEntities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CustomerEntity_ProductExportEntity" Association="dbnailsupplyModel.FK_CustomerEntity_ProductExportEntity">
+            <End Role="CustomerEntity" EntitySet="CustomerEntities" />
+            <End Role="ProductExportEntity" EntitySet="ProductExportEntities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmployeeEntity_EmployeeCategoryEntity" Association="dbnailsupplyModel.FK_EmployeeEntity_EmployeeCategoryEntity">
+            <End Role="EmployeeCategoryEntity" EntitySet="EmployeeCategoryEntities" />
+            <End Role="EmployeeEntity" EntitySet="EmployeeEntities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmployeeLogEntity_EmployeeEntity" Association="dbnailsupplyModel.FK_EmployeeLogEntity_EmployeeEntity">
+            <End Role="EmployeeEntity" EntitySet="EmployeeEntities" />
+            <End Role="EmployeeLogEntity" EntitySet="EmployeeLogEntities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InventoryEntity_ProductExportDetailEntity" Association="dbnailsupplyModel.FK_InventoryEntity_ProductExportDetailEntity">
+            <End Role="InventoryEntity" EntitySet="InventoryEntities" />
+            <End Role="ProductExportDetailEntity" EntitySet="ProductExportDetailEntities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InventoryEntity_ProductImportDetailEntity" Association="dbnailsupplyModel.FK_InventoryEntity_ProductImportDetailEntity">
+            <End Role="InventoryEntity" EntitySet="InventoryEntities" />
+            <End Role="ProductImportDetailEntity" EntitySet="ProductImportDetailEntities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductExportEntity_PaymentEntity" Association="dbnailsupplyModel.FK_ProductExportEntity_PaymentEntity">
+            <End Role="ProductExportEntity" EntitySet="ProductExportEntities" />
+            <End Role="PaymentEntity" EntitySet="PaymentEntities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProviderEntity_ProductEntity" Association="dbnailsupplyModel.FK_ProviderEntity_ProductEntity">
+            <End Role="ProviderEntity" EntitySet="ProviderEntities" />
+            <End Role="ProductEntity" EntitySet="ProductEntities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductExportEntity_ProductExportDetailEntity" Association="dbnailsupplyModel.FK_ProductExportEntity_ProductExportDetailEntity">
+            <End Role="ProductExportEntity" EntitySet="ProductExportEntities" />
+            <End Role="ProductExportDetailEntity" EntitySet="ProductExportDetailEntities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductExportEntity_ProductReturnEntity" Association="dbnailsupplyModel.FK_ProductExportEntity_ProductReturnEntity">
+            <End Role="ProductExportEntity" EntitySet="ProductExportEntities" />
+            <End Role="ProductReturnEntity" EntitySet="ProductReturnEntities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductImportEntity_ProductImportDetailEntity" Association="dbnailsupplyModel.FK_ProductImportEntity_ProductImportDetailEntity">
+            <End Role="ProductImportEntity" EntitySet="ProductImportEntities" />
+            <End Role="ProductImportDetailEntity" EntitySet="ProductImportDetailEntities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductReturnEntity_ProductReturnDetailEntity" Association="dbnailsupplyModel.FK_ProductReturnEntity_ProductReturnDetailEntity">
+            <End Role="ProductReturnEntity" EntitySet="ProductReturnEntities" />
+            <End Role="ProductReturnDetailEntity" EntitySet="ProductReturnDetailEntities" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="CategoryEntity">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+          </Key>
+          <Property Name="CategoryID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="ProductEntities" Relationship="dbnailsupplyModel.FK_CategoryEntity_ProductEntity" FromRole="CategoryEntity" ToRole="ProductEntity" />
+        </EntityType>
+        <EntityType Name="CustomerEntity">
+          <Key>
+            <PropertyRef Name="CustomerID" />
+          </Key>
+          <Property Name="CustomerID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Address" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Phone" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="RowVersion" Type="Binary" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="ProductExportEntities" Relationship="dbnailsupplyModel.FK_CustomerEntity_ProductExportEntity" FromRole="CustomerEntity" ToRole="ProductExportEntity" />
+        </EntityType>
+        <EntityType Name="EmployeeCategoryEntity">
+          <Key>
+            <PropertyRef Name="EmployeeCategoryID" />
+          </Key>
+          <Property Name="EmployeeCategoryID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="EmployeeEntities" Relationship="dbnailsupplyModel.FK_EmployeeEntity_EmployeeCategoryEntity" FromRole="EmployeeCategoryEntity" ToRole="EmployeeEntity" />
+        </EntityType>
+        <EntityType Name="EmployeeEntity">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="EmployeeCategoryID" Type="Int32" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="UserName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="HireDate" Type="DateTime" Precision="3" />
+          <Property Name="Phone" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Password" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="RowVersion" Type="Binary" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="EmployeeCategoryEntity" Relationship="dbnailsupplyModel.FK_EmployeeEntity_EmployeeCategoryEntity" FromRole="EmployeeEntity" ToRole="EmployeeCategoryEntity" />
+          <NavigationProperty Name="EmployeeLogEntities" Relationship="dbnailsupplyModel.FK_EmployeeLogEntity_EmployeeEntity" FromRole="EmployeeEntity" ToRole="EmployeeLogEntity" />
+        </EntityType>
+        <EntityType Name="EmployeeLogEntity">
+          <Key>
+            <PropertyRef Name="EmployeeLogID" />
+          </Key>
+          <Property Name="EmployeeLogID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+          <Property Name="LogInTime" Type="DateTime" Precision="3" />
+          <Property Name="LogOutTime" Type="DateTime" Precision="3" />
+          <Property Name="LogInMachine" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="EmployeeEntity" Relationship="dbnailsupplyModel.FK_EmployeeLogEntity_EmployeeEntity" FromRole="EmployeeLogEntity" ToRole="EmployeeEntity" />
+        </EntityType>
+        <EntityType Name="InventoryEntity">
+          <Key>
+            <PropertyRef Name="InventoryID" />
+          </Key>
+          <Property Name="InventoryID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="UPCBarCode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TotalQuantity" Type="Int32" />
+          <Property Name="ProductStatus" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="Location" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="RowVersion" Type="Binary" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="ProductExportDetailEntities" Relationship="dbnailsupplyModel.FK_InventoryEntity_ProductExportDetailEntity" FromRole="InventoryEntity" ToRole="ProductExportDetailEntity" />
+          <NavigationProperty Name="ProductImportDetailEntities" Relationship="dbnailsupplyModel.FK_InventoryEntity_ProductImportDetailEntity" FromRole="InventoryEntity" ToRole="ProductImportDetailEntity" />
+        </EntityType>
+        <EntityType Name="PaymentEntity">
+          <Key>
+            <PropertyRef Name="PaymentID" />
+          </Key>
+          <Property Name="PaymentID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductExportID" Type="Int32" Nullable="false" />
+          <Property Name="PaymentDate" Type="DateTime" Precision="3" />
+          <Property Name="TotalDiscountAmount" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="TotalTaxAmount" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="TotalItemAmount" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="TotalPayment" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="PaymentType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Cashier" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="RowVersion" Type="Binary" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="ProductExportEntity" Relationship="dbnailsupplyModel.FK_ProductExportEntity_PaymentEntity" FromRole="PaymentEntity" ToRole="ProductExportEntity" />
+        </EntityType>
+        <EntityType Name="ProductEntity">
+          <Key>
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="ProductID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ProviderID" Type="Int32" Nullable="false" />
+          <Property Name="CategoryID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="UPCBarCode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SalePrice" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="ImportPrice" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="UPCType" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="RowVersion" Type="Binary" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="CategoryEntity" Relationship="dbnailsupplyModel.FK_CategoryEntity_ProductEntity" FromRole="ProductEntity" ToRole="CategoryEntity" />
+          <NavigationProperty Name="ProviderEntity" Relationship="dbnailsupplyModel.FK_ProviderEntity_ProductEntity" FromRole="ProductEntity" ToRole="ProviderEntity" />
+        </EntityType>
+        <EntityType Name="ProductExportDetailEntity">
+          <Key>
+            <PropertyRef Name="ProductExportDetailID" />
+          </Key>
+          <Property Name="ProductExportDetailID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductExportID" Type="Int32" Nullable="false" />
+          <Property Name="InventoryID" Type="Int32" Nullable="false" />
+          <Property Name="UPCBarCode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Quantity" Type="Int32" />
+          <Property Name="ExportDate" Type="DateTime" Precision="3" />
+          <Property Name="ItemPrice" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="SubTotal" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="RowVersion" Type="Binary" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="InventoryEntity" Relationship="dbnailsupplyModel.FK_InventoryEntity_ProductExportDetailEntity" FromRole="ProductExportDetailEntity" ToRole="InventoryEntity" />
+          <NavigationProperty Name="ProductExportEntity" Relationship="dbnailsupplyModel.FK_ProductExportEntity_ProductExportDetailEntity" FromRole="ProductExportDetailEntity" ToRole="ProductExportEntity" />
+        </EntityType>
+        <EntityType Name="ProductExportEntity">
+          <Key>
+            <PropertyRef Name="ProductExportID" />
+          </Key>
+          <Property Name="ProductExportID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ExportBarcode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CustomerID" Type="Int32" />
+          <Property Name="ExportDate" Type="DateTime" Precision="3" />
+          <Property Name="TotalQuantity" Type="Int32" />
+          <Property Name="SubTotal" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="SubTax" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="SubDiscount" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="FinalSalePrice" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="TotalImportPrice" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Status" Type="Boolean" />
+          <Property Name="RowVersion" Type="Binary" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="CustomerEntity" Relationship="dbnailsupplyModel.FK_CustomerEntity_ProductExportEntity" FromRole="ProductExportEntity" ToRole="CustomerEntity" />
+          <NavigationProperty Name="PaymentEntities" Relationship="dbnailsupplyModel.FK_ProductExportEntity_PaymentEntity" FromRole="ProductExportEntity" ToRole="PaymentEntity" />
+          <NavigationProperty Name="ProductExportDetailEntities" Relationship="dbnailsupplyModel.FK_ProductExportEntity_ProductExportDetailEntity" FromRole="ProductExportEntity" ToRole="ProductExportDetailEntity" />
+          <NavigationProperty Name="ProductReturnEntities" Relationship="dbnailsupplyModel.FK_ProductExportEntity_ProductReturnEntity" FromRole="ProductExportEntity" ToRole="ProductReturnEntity" />
+        </EntityType>
+        <EntityType Name="ProductImportDetailEntity">
+          <Key>
+            <PropertyRef Name="ProductImportDetailID" />
+          </Key>
+          <Property Name="ProductImportDetailID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductImportID" Type="Int32" Nullable="false" />
+          <Property Name="InventoryID" Type="Int32" Nullable="false" />
+          <Property Name="UPCBarCode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="InQuantity" Type="Int32" />
+          <Property Name="OutQuantity" Type="Int32" />
+          <Property Name="ImportDate" Type="DateTime" Precision="3" />
+          <Property Name="ItemImportPrice" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="TotalImportPrice" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="ItemImportStatus" Type="Int32" />
+          <Property Name="RowVersion" Type="Binary" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="InventoryEntity" Relationship="dbnailsupplyModel.FK_InventoryEntity_ProductImportDetailEntity" FromRole="ProductImportDetailEntity" ToRole="InventoryEntity" />
+          <NavigationProperty Name="ProductImportEntity" Relationship="dbnailsupplyModel.FK_ProductImportEntity_ProductImportDetailEntity" FromRole="ProductImportDetailEntity" ToRole="ProductImportEntity" />
+        </EntityType>
+        <EntityType Name="ProductImportEntity">
+          <Key>
+            <PropertyRef Name="ProductImportID" />
+          </Key>
+          <Property Name="ProductImportID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="TotalInQuantity" Type="Int32" />
+          <Property Name="TotalOutQuantity" Type="Int32" />
+          <Property Name="ImportDate" Type="DateTime" Precision="3" />
+          <Property Name="SubTotal" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="ImportStatus" Type="Int32" />
+          <Property Name="ImportBy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="RowVersion" Type="Binary" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="ProductImportDetailEntities" Relationship="dbnailsupplyModel.FK_ProductImportEntity_ProductImportDetailEntity" FromRole="ProductImportEntity" ToRole="ProductImportDetailEntity" />
+        </EntityType>
+        <EntityType Name="ProductReturnDetailEntity">
+          <Key>
+            <PropertyRef Name="ProductReturnDetailEntityID" />
+          </Key>
+          <Property Name="ProductReturnDetailEntityID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductReturnID" Type="Int32" Nullable="false" />
+          <Property Name="ReturnDate" Type="DateTime" Precision="3" />
+          <Property Name="UPCBarCode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Quantity" Type="Int32" />
+          <Property Name="PriceReturn" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="TaxReturn" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="DiscountReturn" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="FinalPriceReturn" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="RowVersion" Type="Binary" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="ProductReturnEntity" Relationship="dbnailsupplyModel.FK_ProductReturnEntity_ProductReturnDetailEntity" FromRole="ProductReturnDetailEntity" ToRole="ProductReturnEntity" />
+        </EntityType>
+        <EntityType Name="ProductReturnEntity">
+          <Key>
+            <PropertyRef Name="ProductReturnID" />
+          </Key>
+          <Property Name="ProductReturnID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductReturnBarcode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ProductExportID" Type="Int32" Nullable="false" />
+          <Property Name="ReturnDate" Type="DateTime" Precision="3" />
+          <Property Name="TotalItemReturn" Type="Int32" />
+          <Property Name="TotalPriceReturn" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="TotalTaxReturn" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="TotalDiscountReturn" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="FinalPriceReturn" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="RowVersion" Type="Binary" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="ProductExportEntity" Relationship="dbnailsupplyModel.FK_ProductExportEntity_ProductReturnEntity" FromRole="ProductReturnEntity" ToRole="ProductExportEntity" />
+          <NavigationProperty Name="ProductReturnDetailEntities" Relationship="dbnailsupplyModel.FK_ProductReturnEntity_ProductReturnDetailEntity" FromRole="ProductReturnEntity" ToRole="ProductReturnDetailEntity" />
+        </EntityType>
+        <EntityType Name="ProviderEntity">
+          <Key>
+            <PropertyRef Name="ProviderID" />
+          </Key>
+          <Property Name="ProviderID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Address" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Phone" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="RowVersion" Type="Binary" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="ProductEntities" Relationship="dbnailsupplyModel.FK_ProviderEntity_ProductEntity" FromRole="ProviderEntity" ToRole="ProductEntity" />
+        </EntityType>
+        <Association Name="FK_CategoryEntity_ProductEntity">
+          <End Role="CategoryEntity" Type="dbnailsupplyModel.CategoryEntity" Multiplicity="1" />
+          <End Role="ProductEntity" Type="dbnailsupplyModel.ProductEntity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CategoryEntity">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="ProductEntity">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CustomerEntity_ProductExportEntity">
+          <End Role="CustomerEntity" Type="dbnailsupplyModel.CustomerEntity" Multiplicity="0..1" />
+          <End Role="ProductExportEntity" Type="dbnailsupplyModel.ProductExportEntity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CustomerEntity">
+              <PropertyRef Name="CustomerID" />
+            </Principal>
+            <Dependent Role="ProductExportEntity">
+              <PropertyRef Name="CustomerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmployeeEntity_EmployeeCategoryEntity">
+          <End Role="EmployeeCategoryEntity" Type="dbnailsupplyModel.EmployeeCategoryEntity" Multiplicity="1" />
+          <End Role="EmployeeEntity" Type="dbnailsupplyModel.EmployeeEntity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmployeeCategoryEntity">
+              <PropertyRef Name="EmployeeCategoryID" />
+            </Principal>
+            <Dependent Role="EmployeeEntity">
+              <PropertyRef Name="EmployeeCategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmployeeLogEntity_EmployeeEntity">
+          <End Role="EmployeeEntity" Type="dbnailsupplyModel.EmployeeEntity" Multiplicity="1" />
+          <End Role="EmployeeLogEntity" Type="dbnailsupplyModel.EmployeeLogEntity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmployeeEntity">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="EmployeeLogEntity">
+              <PropertyRef Name="EmployeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InventoryEntity_ProductExportDetailEntity">
+          <End Role="InventoryEntity" Type="dbnailsupplyModel.InventoryEntity" Multiplicity="1" />
+          <End Role="ProductExportDetailEntity" Type="dbnailsupplyModel.ProductExportDetailEntity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InventoryEntity">
+              <PropertyRef Name="InventoryID" />
+            </Principal>
+            <Dependent Role="ProductExportDetailEntity">
+              <PropertyRef Name="InventoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InventoryEntity_ProductImportDetailEntity">
+          <End Role="InventoryEntity" Type="dbnailsupplyModel.InventoryEntity" Multiplicity="1" />
+          <End Role="ProductImportDetailEntity" Type="dbnailsupplyModel.ProductImportDetailEntity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InventoryEntity">
+              <PropertyRef Name="InventoryID" />
+            </Principal>
+            <Dependent Role="ProductImportDetailEntity">
+              <PropertyRef Name="InventoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductExportEntity_PaymentEntity">
+          <End Role="ProductExportEntity" Type="dbnailsupplyModel.ProductExportEntity" Multiplicity="1" />
+          <End Role="PaymentEntity" Type="dbnailsupplyModel.PaymentEntity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductExportEntity">
+              <PropertyRef Name="ProductExportID" />
+            </Principal>
+            <Dependent Role="PaymentEntity">
+              <PropertyRef Name="ProductExportID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProviderEntity_ProductEntity">
+          <End Role="ProviderEntity" Type="dbnailsupplyModel.ProviderEntity" Multiplicity="1" />
+          <End Role="ProductEntity" Type="dbnailsupplyModel.ProductEntity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProviderEntity">
+              <PropertyRef Name="ProviderID" />
+            </Principal>
+            <Dependent Role="ProductEntity">
+              <PropertyRef Name="ProviderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductExportEntity_ProductExportDetailEntity">
+          <End Role="ProductExportEntity" Type="dbnailsupplyModel.ProductExportEntity" Multiplicity="1" />
+          <End Role="ProductExportDetailEntity" Type="dbnailsupplyModel.ProductExportDetailEntity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductExportEntity">
+              <PropertyRef Name="ProductExportID" />
+            </Principal>
+            <Dependent Role="ProductExportDetailEntity">
+              <PropertyRef Name="ProductExportID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductExportEntity_ProductReturnEntity">
+          <End Role="ProductExportEntity" Type="dbnailsupplyModel.ProductExportEntity" Multiplicity="1" />
+          <End Role="ProductReturnEntity" Type="dbnailsupplyModel.ProductReturnEntity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductExportEntity">
+              <PropertyRef Name="ProductExportID" />
+            </Principal>
+            <Dependent Role="ProductReturnEntity">
+              <PropertyRef Name="ProductExportID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductImportEntity_ProductImportDetailEntity">
+          <End Role="ProductImportEntity" Type="dbnailsupplyModel.ProductImportEntity" Multiplicity="1" />
+          <End Role="ProductImportDetailEntity" Type="dbnailsupplyModel.ProductImportDetailEntity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductImportEntity">
+              <PropertyRef Name="ProductImportID" />
+            </Principal>
+            <Dependent Role="ProductImportDetailEntity">
+              <PropertyRef Name="ProductImportID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductReturnEntity_ProductReturnDetailEntity">
+          <End Role="ProductReturnEntity" Type="dbnailsupplyModel.ProductReturnEntity" Multiplicity="1" />
+          <End Role="ProductReturnDetailEntity" Type="dbnailsupplyModel.ProductReturnDetailEntity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductReturnEntity">
+              <PropertyRef Name="ProductReturnID" />
+            </Principal>
+            <Dependent Role="ProductReturnDetailEntity">
+              <PropertyRef Name="ProductReturnID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="dbnailsupplyModelStoreContainer" CdmEntityContainer="dbnailsupplyEntities">
+          <EntitySetMapping Name="CategoryEntities">
+            <EntityTypeMapping TypeName="dbnailsupplyModel.CategoryEntity">
+              <MappingFragment StoreEntitySet="CategoryEntity">
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CustomerEntities">
+            <EntityTypeMapping TypeName="dbnailsupplyModel.CustomerEntity">
+              <MappingFragment StoreEntitySet="CustomerEntity">
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EmployeeCategoryEntities">
+            <EntityTypeMapping TypeName="dbnailsupplyModel.EmployeeCategoryEntity">
+              <MappingFragment StoreEntitySet="EmployeeCategoryEntity">
+                <ScalarProperty Name="EmployeeCategoryID" ColumnName="EmployeeCategoryID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EmployeeEntities">
+            <EntityTypeMapping TypeName="dbnailsupplyModel.EmployeeEntity">
+              <MappingFragment StoreEntitySet="EmployeeEntity">
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="EmployeeCategoryID" ColumnName="EmployeeCategoryID" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="HireDate" ColumnName="HireDate" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EmployeeLogEntities">
+            <EntityTypeMapping TypeName="dbnailsupplyModel.EmployeeLogEntity">
+              <MappingFragment StoreEntitySet="EmployeeLogEntity">
+                <ScalarProperty Name="EmployeeLogID" ColumnName="EmployeeLogID" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="LogInTime" ColumnName="LogInTime" />
+                <ScalarProperty Name="LogOutTime" ColumnName="LogOutTime" />
+                <ScalarProperty Name="LogInMachine" ColumnName="LogInMachine" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InventoryEntities">
+            <EntityTypeMapping TypeName="dbnailsupplyModel.InventoryEntity">
+              <MappingFragment StoreEntitySet="InventoryEntity">
+                <ScalarProperty Name="InventoryID" ColumnName="InventoryID" />
+                <ScalarProperty Name="UPCBarCode" ColumnName="UPCBarCode" />
+                <ScalarProperty Name="TotalQuantity" ColumnName="TotalQuantity" />
+                <ScalarProperty Name="ProductStatus" ColumnName="ProductStatus" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PaymentEntities">
+            <EntityTypeMapping TypeName="dbnailsupplyModel.PaymentEntity">
+              <MappingFragment StoreEntitySet="PaymentEntity">
+                <ScalarProperty Name="PaymentID" ColumnName="PaymentID" />
+                <ScalarProperty Name="ProductExportID" ColumnName="ProductExportID" />
+                <ScalarProperty Name="PaymentDate" ColumnName="PaymentDate" />
+                <ScalarProperty Name="TotalDiscountAmount" ColumnName="TotalDiscountAmount" />
+                <ScalarProperty Name="TotalTaxAmount" ColumnName="TotalTaxAmount" />
+                <ScalarProperty Name="TotalItemAmount" ColumnName="TotalItemAmount" />
+                <ScalarProperty Name="TotalPayment" ColumnName="TotalPayment" />
+                <ScalarProperty Name="PaymentType" ColumnName="PaymentType" />
+                <ScalarProperty Name="Cashier" ColumnName="Cashier" />
+                <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductEntities">
+            <EntityTypeMapping TypeName="dbnailsupplyModel.ProductEntity">
+              <MappingFragment StoreEntitySet="ProductEntity">
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="ProviderID" ColumnName="ProviderID" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="UPCBarCode" ColumnName="UPCBarCode" />
+                <ScalarProperty Name="SalePrice" ColumnName="SalePrice" />
+                <ScalarProperty Name="ImportPrice" ColumnName="ImportPrice" />
+                <ScalarProperty Name="UPCType" ColumnName="UPCType" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductExportDetailEntities">
+            <EntityTypeMapping TypeName="dbnailsupplyModel.ProductExportDetailEntity">
+              <MappingFragment StoreEntitySet="ProductExportDetailEntity">
+                <ScalarProperty Name="ProductExportDetailID" ColumnName="ProductExportDetailID" />
+                <ScalarProperty Name="ProductExportID" ColumnName="ProductExportID" />
+                <ScalarProperty Name="InventoryID" ColumnName="InventoryID" />
+                <ScalarProperty Name="UPCBarCode" ColumnName="UPCBarCode" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="ExportDate" ColumnName="ExportDate" />
+                <ScalarProperty Name="ItemPrice" ColumnName="ItemPrice" />
+                <ScalarProperty Name="SubTotal" ColumnName="SubTotal" />
+                <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductExportEntities">
+            <EntityTypeMapping TypeName="dbnailsupplyModel.ProductExportEntity">
+              <MappingFragment StoreEntitySet="ProductExportEntity">
+                <ScalarProperty Name="ProductExportID" ColumnName="ProductExportID" />
+                <ScalarProperty Name="ExportBarcode" ColumnName="ExportBarcode" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="ExportDate" ColumnName="ExportDate" />
+                <ScalarProperty Name="TotalQuantity" ColumnName="TotalQuantity" />
+                <ScalarProperty Name="SubTotal" ColumnName="SubTotal" />
+                <ScalarProperty Name="SubTax" ColumnName="SubTax" />
+                <ScalarProperty Name="SubDiscount" ColumnName="SubDiscount" />
+                <ScalarProperty Name="FinalSalePrice" ColumnName="FinalSalePrice" />
+                <ScalarProperty Name="TotalImportPrice" ColumnName="TotalImportPrice" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductImportDetailEntities">
+            <EntityTypeMapping TypeName="dbnailsupplyModel.ProductImportDetailEntity">
+              <MappingFragment StoreEntitySet="ProductImportDetailEntity">
+                <ScalarProperty Name="ProductImportDetailID" ColumnName="ProductImportDetailID" />
+                <ScalarProperty Name="ProductImportID" ColumnName="ProductImportID" />
+                <ScalarProperty Name="InventoryID" ColumnName="InventoryID" />
+                <ScalarProperty Name="UPCBarCode" ColumnName="UPCBarCode" />
+                <ScalarProperty Name="InQuantity" ColumnName="InQuantity" />
+                <ScalarProperty Name="OutQuantity" ColumnName="OutQuantity" />
+                <ScalarProperty Name="ImportDate" ColumnName="ImportDate" />
+                <ScalarProperty Name="ItemImportPrice" ColumnName="ItemImportPrice" />
+                <ScalarProperty Name="TotalImportPrice" ColumnName="TotalImportPrice" />
+                <ScalarProperty Name="ItemImportStatus" ColumnName="ItemImportStatus" />
+                <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductImportEntities">
+            <EntityTypeMapping TypeName="dbnailsupplyModel.ProductImportEntity">
+              <MappingFragment StoreEntitySet="ProductImportEntity">
+                <ScalarProperty Name="ProductImportID" ColumnName="ProductImportID" />
+                <ScalarProperty Name="TotalInQuantity" ColumnName="TotalInQuantity" />
+                <ScalarProperty Name="TotalOutQuantity" ColumnName="TotalOutQuantity" />
+                <ScalarProperty Name="ImportDate" ColumnName="ImportDate" />
+                <ScalarProperty Name="SubTotal" ColumnName="SubTotal" />
+                <ScalarProperty Name="ImportStatus" ColumnName="ImportStatus" />
+                <ScalarProperty Name="ImportBy" ColumnName="ImportBy" />
+                <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductReturnDetailEntities">
+            <EntityTypeMapping TypeName="dbnailsupplyModel.ProductReturnDetailEntity">
+              <MappingFragment StoreEntitySet="ProductReturnDetailEntity">
+                <ScalarProperty Name="ProductReturnDetailEntityID" ColumnName="ProductReturnDetailEntityID" />
+                <ScalarProperty Name="ProductReturnID" ColumnName="ProductReturnID" />
+                <ScalarProperty Name="ReturnDate" ColumnName="ReturnDate" />
+                <ScalarProperty Name="UPCBarCode" ColumnName="UPCBarCode" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="PriceReturn" ColumnName="PriceReturn" />
+                <ScalarProperty Name="TaxReturn" ColumnName="TaxReturn" />
+                <ScalarProperty Name="DiscountReturn" ColumnName="DiscountReturn" />
+                <ScalarProperty Name="FinalPriceReturn" ColumnName="FinalPriceReturn" />
+                <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductReturnEntities">
+            <EntityTypeMapping TypeName="dbnailsupplyModel.ProductReturnEntity">
+              <MappingFragment StoreEntitySet="ProductReturnEntity">
+                <ScalarProperty Name="ProductReturnID" ColumnName="ProductReturnID" />
+                <ScalarProperty Name="ProductReturnBarcode" ColumnName="ProductReturnBarcode" />
+                <ScalarProperty Name="ProductExportID" ColumnName="ProductExportID" />
+                <ScalarProperty Name="ReturnDate" ColumnName="ReturnDate" />
+                <ScalarProperty Name="TotalItemReturn" ColumnName="TotalItemReturn" />
+                <ScalarProperty Name="TotalPriceReturn" ColumnName="TotalPriceReturn" />
+                <ScalarProperty Name="TotalTaxReturn" ColumnName="TotalTaxReturn" />
+                <ScalarProperty Name="TotalDiscountReturn" ColumnName="TotalDiscountReturn" />
+                <ScalarProperty Name="FinalPriceReturn" ColumnName="FinalPriceReturn" />
+                <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProviderEntities">
+            <EntityTypeMapping TypeName="dbnailsupplyModel.ProviderEntity">
+              <MappingFragment StoreEntitySet="ProviderEntity">
+                <ScalarProperty Name="ProviderID" ColumnName="ProviderID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

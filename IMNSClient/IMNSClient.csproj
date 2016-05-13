@@ -1,0 +1,508 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4FD136E6-0393-4514-B9B8-AB59C2E71CF0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IMNSClient</RootNamespace>
+    <AssemblyName>IMNSClient</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="BarcodeLib, Version=1.0.0.16, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\BarcodeLib.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL\MyPrintDocument.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BL\NailSupplyData.cs" />
+    <Compile Include="BL\NailSupplyManager.cs" />
+    <Compile Include="BL\PrintManager.cs" />
+    <Compile Include="IMNSMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IMNSMainForm.Designer.cs">
+      <DependentUpon>IMNSMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IMNSSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IMNSSettingsForm.Designer.cs">
+      <DependentUpon>IMNSSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="generatedProxy.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\BarcodeCatalogReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\BarcodeCatalogReportForm.Designer.cs">
+      <DependentUpon>BarcodeCatalogReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ProductSearchingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ProductSearchingForm.Designer.cs">
+      <DependentUpon>ProductSearchingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ReportFunctionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ReportFunctionForm.Designer.cs">
+      <DependentUpon>ReportFunctionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ReturnOrderDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ReturnOrderDetailForm.Designer.cs">
+      <DependentUpon>ReturnOrderDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\InventoryCheckForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\InventoryCheckForm.Designer.cs">
+      <DependentUpon>InventoryCheckForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\InventoryEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\InventoryEditForm.Designer.cs">
+      <DependentUpon>InventoryEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\InventoryReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\InventoryReportForm.Designer.cs">
+      <DependentUpon>InventoryReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\InventorySettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\InventorySettingsForm.Designer.cs">
+      <DependentUpon>InventorySettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PriceCheckForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PriceCheckForm.Designer.cs">
+      <DependentUpon>PriceCheckForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PrintBarcodeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PrintBarcodeForm.Designer.cs">
+      <DependentUpon>PrintBarcodeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PrintProductBarcodeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PrintProductBarcodeForm.Designer.cs">
+      <DependentUpon>PrintProductBarcodeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ProductCategoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ProductCategoryForm.Designer.cs">
+      <DependentUpon>ProductCategoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ProductEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ProductEditForm.Designer.cs">
+      <DependentUpon>ProductEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ProductImportDetailEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ProductImportDetailEditForm.Designer.cs">
+      <DependentUpon>ProductImportDetailEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ProductImportDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ProductImportDetailForm.Designer.cs">
+      <DependentUpon>ProductImportDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ProductImportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ProductImportForm.Designer.cs">
+      <DependentUpon>ProductImportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ProductOrderDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ProductOrderDetailForm.Designer.cs">
+      <DependentUpon>ProductOrderDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ProductSellingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ProductSellingForm.Designer.cs">
+      <DependentUpon>ProductSellingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ProductSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ProductSettingsForm.Designer.cs">
+      <DependentUpon>ProductSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ProviderEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ProviderEditForm.Designer.cs">
+      <DependentUpon>ProviderEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ProviderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ProviderForm.Designer.cs">
+      <DependentUpon>ProviderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SaleReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SaleReportForm.Designer.cs">
+      <DependentUpon>SaleReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Util\BarcodeCatalog.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BarcodeCatalog.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Util\BarcodeCatalogReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BarcodeCatalogReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Util\BarcodeHandleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Util\BarcodeHandleForm.Designer.cs">
+      <DependentUpon>BarcodeHandleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Util\BarcodeReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BarcodeReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Util\Barcodes.cs">
+      <DependentUpon>Barcodes.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Util\Barcodes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Barcodes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Util\SaleReport.cs">
+      <DependentUpon>SaleReport.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Util\SaleReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SaleReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Util\UPKNumberForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Util\UPKNumberForm.Designer.cs">
+      <DependentUpon>UPKNumberForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Util\DiscountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Util\DiscountForm.designer.cs">
+      <DependentUpon>DiscountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Util\DSProductInventory.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSProductInventory.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Util\IMNSUtility.cs" />
+    <Compile Include="Util\InventoryReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventoryReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Util\NumberForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Util\NumberForm.Designer.cs">
+      <DependentUpon>NumberForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Util\UpcA.cs" />
+    <EmbeddedResource Include="IMNSMainForm.resx">
+      <DependentUpon>IMNSMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IMNSSettingsForm.resx">
+      <DependentUpon>IMNSSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UI\BarcodeCatalogReportForm.resx">
+      <DependentUpon>BarcodeCatalogReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ProductSearchingForm.resx">
+      <DependentUpon>ProductSearchingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ReportFunctionForm.resx">
+      <DependentUpon>ReportFunctionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ReturnOrderDetailForm.resx">
+      <DependentUpon>ReturnOrderDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\InventoryCheckForm.resx">
+      <DependentUpon>InventoryCheckForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\InventoryEditForm.resx">
+      <DependentUpon>InventoryEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\InventoryReportForm.resx">
+      <DependentUpon>InventoryReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\InventorySettingsForm.resx">
+      <DependentUpon>InventorySettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PriceCheckForm.resx">
+      <DependentUpon>PriceCheckForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PrintBarcodeForm.resx">
+      <DependentUpon>PrintBarcodeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PrintProductBarcodeForm.resx">
+      <DependentUpon>PrintProductBarcodeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ProductCategoryForm.resx">
+      <DependentUpon>ProductCategoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ProductEditForm.resx">
+      <DependentUpon>ProductEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ProductImportDetailEditForm.resx">
+      <DependentUpon>ProductImportDetailEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ProductImportDetailForm.resx">
+      <DependentUpon>ProductImportDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ProductImportForm.resx">
+      <DependentUpon>ProductImportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ProductOrderDetailForm.resx">
+      <DependentUpon>ProductOrderDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ProductSellingForm.resx">
+      <DependentUpon>ProductSellingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ProductSettingsForm.resx">
+      <DependentUpon>ProductSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ProviderEditForm.resx">
+      <DependentUpon>ProviderEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ProviderForm.resx">
+      <DependentUpon>ProviderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SaleReportForm.resx">
+      <DependentUpon>SaleReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Util\BarcodeCatalogReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BarcodeCatalogReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Util\BarcodeHandleForm.resx">
+      <DependentUpon>BarcodeHandleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Util\BarcodeReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BarcodeReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Util\UPKNumberForm.resx">
+      <DependentUpon>UPKNumberForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Util\DiscountForm.resx">
+      <DependentUpon>DiscountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Util\InventoryReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>InventoryReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Util\NumberForm.resx">
+      <DependentUpon>NumberForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\IMNS.ServiceModel.Service.BL.Category.datasource" />
+    <None Include="Properties\DataSources\IMNS.ServiceModel.Service.BL.Inventory.datasource" />
+    <None Include="Properties\DataSources\IMNS.ServiceModel.Service.BL.Product.datasource" />
+    <None Include="Properties\DataSources\IMNS.ServiceModel.Service.BL.ProductExport.datasource" />
+    <None Include="Properties\DataSources\IMNS.ServiceModel.Service.BL.ProductExportDetail.datasource" />
+    <None Include="Properties\DataSources\IMNS.ServiceModel.Service.BL.ProductImport.datasource" />
+    <None Include="Properties\DataSources\IMNS.ServiceModel.Service.BL.ProductImportDetail.datasource" />
+    <None Include="Properties\DataSources\IMNS.ServiceModel.Service.BL.ProductReturnDetail.datasource" />
+    <None Include="Properties\DataSources\IMNS.ServiceModel.Service.BL.Provider.datasource" />
+    <None Include="Properties\DataSources\IMNS.ServiceModel.Service.BL.SaleReportData.datasource" />
+    <None Include="Properties\DataSources\IMNSClient.BL.NailSupplyManager.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Util\BarcodeCatalog.xsc">
+      <DependentUpon>BarcodeCatalog.xsd</DependentUpon>
+    </None>
+    <None Include="Util\BarcodeCatalog.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BarcodeCatalog.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Util\BarcodeCatalog.xss">
+      <DependentUpon>BarcodeCatalog.xsd</DependentUpon>
+    </None>
+    <None Include="Util\Barcodes.xsc">
+      <DependentUpon>Barcodes.xsd</DependentUpon>
+    </None>
+    <None Include="Util\Barcodes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Barcodes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Util\Barcodes.xss">
+      <DependentUpon>Barcodes.xsd</DependentUpon>
+    </None>
+    <None Include="Util\DSProductInventory.xsc">
+      <DependentUpon>DSProductInventory.xsd</DependentUpon>
+    </None>
+    <None Include="Util\DSProductInventory.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSProductInventory.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Util\DSProductInventory.xss">
+      <DependentUpon>DSProductInventory.xsd</DependentUpon>
+    </None>
+    <None Include="Util\SaleReport.xsc">
+      <DependentUpon>SaleReport.xsd</DependentUpon>
+    </None>
+    <None Include="Util\SaleReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SaleReport.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Util\SaleReport.xss">
+      <DependentUpon>SaleReport.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
